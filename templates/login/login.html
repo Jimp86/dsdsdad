@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Vesaly</title>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/static/images/favicon.png">
+        <!-- Bootstrap -->
+        <link href="/static/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="/static/bootstrap/bootstrap-theme.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="/static/css/style.css" rel="stylesheet">
+        <link href="/static/css/log/main.css" rel="stylesheet">
+        <!-- Owl Carousel stylesheets -->
+        <link href="/static/css/owl.carousel.css" rel="stylesheet">
+        <link href="/static/css/owl.theme.css" rel="stylesheet">
+        <!-- Fonts -->
+        <link href="/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/static/fonts/iconic/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <!-- Fancybox -->
+        <link href="/static/css/jquery.fancybox.css" rel="stylesheet">
+        <!-- Animate - necessary for Wow.js -->
+        <link href="/static/css/animate.css" rel="stylesheet">
+        <!-- Google Fonts -->
+        <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700|Oranienbaum|PT+Serif:400italic" rel="stylesheet">
+        <!-- Font Awesome Icons >
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.css" rel="stylesheet"-->
+</head>
+    
+<body data-spy="scroll" data-target=".navbar-collapse">
+    <div class="navbar navbar-fixed-top">
+
+    <div id="banner" >
+      <!--div id="cover"></div-->
+      <video id="bgvid" loop autoplay>
+        <source src="/static/videos/video1.mp4" type="video/mp4" />
+        <source src="/static/videos/video1.ogv" type="video/ogg" />
+      </video>
+        <div class="tint">
+          <div class="limiter">
+            <div class="container-login100">
+              <div class="wrap-login100 p-l-55 p-r-55 p-t-15 p-b-15">
+                <form class="login100-form validate-form">
+                  <span class="login100-form-title p-b-49"><h2>Ingresar</h2></span>
+                    <div class="login-form">
+                      <form method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                          {% if form.error_messages %}
+                          <div class="alert alert-danger alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss = "alert" aria-label = "Close">
+                              <span aria-hidden = "true">&times;</span>
+                            </button>
+                            <strong>Advertencia: </strong> {{ form.get_invalid_login_error }}
+                          </div>
+                          {% endif %}
+                          <input class="input100" type="text" name="username" placeholder="user">
+                          {{ form.username }}
+                        </div>
+                        <div class="form-group">
+                          <input class="input100" type="password" name="pass" placeholder="Password">
+                          {{ form.password }}
+                        </div>
+                          <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Iniciar Sesión</button>
+                      </form>
+                    </div>
+
+                                    <div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+                                        <span class="label-input100"></span>
+                                        <input class="input100" type="text" name="username" placeholder="Email">
+                                        <span class="focus-input100" data-symbol="&#xf206;"></span>
+                                    </div>
+
+                                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                                        <span class="label-input100"></span>
+                                        <input class="input100" type="password" name="pass" placeholder="Password">
+                                        <span class="focus-input100" data-symbol="&#xf190;"></span>
+                                    </div>
+
+                                    <div class="text-right p-t-8 p-b-31">
+                                        <a href="#">
+                                            Forgot password?
+                                        </a>
+                                    </div>
+
+                                    <div class="container-login100-form-btn">
+                                        <div class="wrap-login100-form-btn">
+                                            <div class="login100-form-bgbtn"></div>
+                                            <button class="login100-form-btn">
+                                                Login
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="txt1 text-center p-t-54 p-b-20">
+                                        <span>
+                                            Or Sign Up Using
+                                        </span>
+                                    </div>
+
+                                    <div class="flex-c-m">
+                                        <a href="#" class="login100-social-item bg1">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                        <!--a href="#" class="login100-social-item bg2">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                        <a href="#" class="login100-social-item bg3">
+                                            <i class="fa fa-google"></i>
+                                        </a-->
+                                    </div>
+
+                                    <div class="flex-col-c p-t-155">
+                                        <span class="txt1 p-b-17">
+                                            Or Sign Up Using
+                                        </span>
+
+                                        <a href="#" class="txt2">
+                                            Sign Up
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                        <a href="/login" id="btn btn-default btn-lg" class="btn btn-default btn-lg">EMPEZAR </a>
+                                          
+
+
+        </div>
+        </div>
+
+        
+        
+
+	
+
+	<div id="dropDownSelect1"></div>
+	
+        
+    <!-- Poppup Plugin -->
+    <script src="/static/js/popup.js"></script>
+    <!-- Modernizr Plugin -->
+    <script src="/static/js/modernizr.custom.97074.js"></script>
+    <!-- Script Icons Fontawesome -->
+    <script src="https://kit.fontawesome.com/a04cb7dfe7.js" crossorigin="anonymous"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/static/js/jquery-1.10.2.min.js"></script>
+    <!-- Bootstrap Plugins -->
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- Retina Plugin -->
+    <script src="/static/js/retina-1.1.0.min.js"></script>
+    <!-- Owl Carousel Plugin -->
+    <script src="/static/js/owl.carousel.js"></script>
+    <!-- Scrolly Plugin -->
+    <script src="/static/js/jquery.scrolly.js"></script>
+    <!-- MixItUp Plugin -->
+    <script src="/static/js/jquery.mixitup.min.js"></script>
+    <!-- Fancybox Plugin -->
+    <script src="/static/js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+
+    <!-- WOW Plugin -->
+    <script src="/static/js/jquery.fancybox.js"></script>
+    <!-- Contact form processing plugin -->
+    <script src="/static/js/magic.js"></script>
+    <!-- jQuery Settings -->
+    <script src="/static/js/settings-video.js"></script>        
+
+</body>
+</html>
